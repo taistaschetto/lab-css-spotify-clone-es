@@ -7,19 +7,19 @@ White: #FFF
 
 */
 
-@font-face {
-  font-family: Montserrat;
-  src: url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
-}
-
-* {
+@import url("https://fonts.googleapis.com/css2?family=Flow+Circular&display=swap") * {
   box-sizing: border-box;
 }
 
 body {
   margin: 0;
+  font-family: "Flow Circular", system-ui;
 }
 
+a {
+  color: inherit;
+  text-decoration: none;
+}
 .header {
   display: flex;
   justify-content: space-between;
@@ -30,17 +30,18 @@ body {
     height: 40px;
     width: 132px;
   }
+  .navbar ul {
+    height: 100%;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    align-items: center;
+  }
 }
-.navbar ul {
-  height: 100%;
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  display: flex;
-  flex-direction: row;
-  gap: 20px;
-  align-items: center;
-}
+
 .background-img {
   background-image: url(/lab-css-spotify-clone-es/images/landing.jpg);
   background-color: #fff;
@@ -52,15 +53,15 @@ body {
   height: 110vh;
   width: 100vw;
   align-items: center;
-}
-.centered-text {
-  color: #fff;
-  font-size: 2.3em;
-  text-align: center;
-}
 
-.maintitle {
-  margin-top: 0;
+  .centered-text {
+    color: #fff;
+    font-size: 2.3em;
+    text-align: center;
+  }
+  .maintitle {
+    margin-top: 0;
+  }
 }
 
 .whatson {
@@ -73,6 +74,7 @@ body {
   .secondtitle {
     border-bottom: 2px solid #00b172;
     padding-bottom: 5px;
+    margin-bottom: 50px;
   }
 
   .container {
@@ -90,14 +92,72 @@ body {
       justify-content: space-between;
       padding: 85px;
     }
+
+    h3 {
+      color: #00b172;
+      margin-bottom: 0px;
+    }
+
+    .p-section {
+      color: #1a1a1a;
+      font-weight: 100;
+    }
   }
 
   .container img {
     align-self: center;
-    width: 25%;
+    width: 30%;
+  }
+}
+
+.footer {
+  display: flex;
+  flex-direction: row;
+  background-color: #00b172;
+  justify-content: center;
+  /* gap: 100px; */
+  align-items: center;
+  margin: 30px;
+  height: 800px;
+
+  h2{
+    display: inline;
+    border-bottom: 2px solid #fff;
+    font-size: 2em;
+
   }
 
+  .white-logo {
+    position: absolute;
+    width: 9%;
 
+  }
 
-  
+  .footer-text {
+    height: 60vh;
+    text-align: left;
+    padding: 30px 70px;
+    color: #fff;
+    letter-spacing: 0.5px;
+    margin-top: 30px;
+  }
+
+  aside {
+    display: flex;
+    justify-content: center;
+    padding: 50px;
+  }
+  .app-img {
+    width: 60%;
+    height: auto;
+    max-height: 100vh;
+  }
+
+  .footerdivs{
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 10px 400px 10px 0px;
+  }
 }
